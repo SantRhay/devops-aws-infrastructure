@@ -1,62 +1,39 @@
 # 🚀 AWS VPC Infrastructure with Terraform
 
-## 📌 Projeto
+## 📌 Overview
+This project provisions a production-ready AWS VPC environment using Terraform with remote state management (S3) and state locking (DynamoDB).
 
-Provisionamento de infraestrutura AWS utilizando Terraform com backend remoto S3.
-
-## 🏗 Arquitetura
-
-- VPC customizada
-- 2 Subnets públicas
-- 2 Subnets privadas
-- Internet Gateway
-- NAT Gateway
-- Route Tables
-- Backend remoto S3 com lock
-
-## 🔧 Tecnologias
-
-- Terraform
-- AWS
-- S3 (remote state)
-- DynamoDB (lock)
-
-## 📂 Estrutura
- terraform/
-├── provider.tf
-├── backend.tf
-├── vpc.tf
-├── variables.tf
-└── outputs.tf
-## 🚀 Como executar
-
-```bash
-terraform init
-terraform plan
-terraform apply
-
-🎯 Boas práticas aplicadas
-
-•	Backend remoto
-•	Lock de estado
-•	Infraestrutura versionada
-•	Multi-AZ
-•	Separação subnet pública/privada
+The infrastructure follows cloud best practices including public/private subnet separation and high availability design.
 
 ---
 
-# 📤 PARTE 3 — Subir para o GitHub
+## 🏗 Architecture
 
-## 1️⃣ Criar repositório no GitHub
+- Custom VPC
+- 2 Public Subnets (Multi-AZ)
+- 2 Private Subnets (Multi-AZ)
+- Internet Gateway
+- NAT Gateway
+- Public & Private Route Tables
+- Remote Terraform State (S3)
+- State Locking (DynamoDB)
 
-Nome sugerido: devops-aws-vpc-terraform
+---
 
-## 2️⃣ Conectar projeto local
+## 🔐 Best Practices Applied
 
-```bash
-git init
-git add .
-git commit -m "Initial commit - AWS VPC with Terraform"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/devops-aws-vpc-terraform.git
-git push -u origin main
+- Infrastructure as Code (IaC)
+- Remote State Management
+- State Locking
+- High Availability (Multi-AZ)
+- Public/Private Network Segmentation
+- Version-controlled infrastructure
+
+---
+
+## ⚙️ Technologies
+
+- AWS
+- Terraform
+- S3 (Remote Backend)
+- DynamoDB (State Locking)
